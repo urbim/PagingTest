@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/example_list">
+
+    <fragment
+        android:id="@+id/example_list"
+        android:name="com.example.pagingtest.ui.examplelist.ExampleListFragment"
+        android:label="Example list"
+        tools:layout="@layout/fragment_example_list" >
+        <action
+            android:id="@+id/action_example_list_to_exampleDetailsFragment"
+            app:destination="@id/exampleDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exampleDetailsFragment"
+        android:name="com.example.pagingtest.ui.exampledetails.ExampleDetailsFragment"
+        android:label="ExampleDetailsFragment" >
+        <argument
+            android:name="user"
+            app:argType="com.example.pagingtest.dto.UserDto" />
+    </fragment>
+
+</navigation>
